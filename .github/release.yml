@@ -4,7 +4,8 @@ on:
     types: [published]
 jobs:
   publish:
-    environment: release       # needed for PyPI OIDC
+    environment:
+      name: release       # required for PyPI OIDC token exchange
     runs-on: ubuntu-latest
     permissions:
       id-token: write
